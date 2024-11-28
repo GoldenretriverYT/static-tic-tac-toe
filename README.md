@@ -19,6 +19,11 @@ No JavaScript is required, just plain HTML. Each click on a tile is a link (<a>-
 Try it out at [tictactoe.programar.io](https://tictactoe.programar.io).
 
 
+## Try it yourself
+
+You can just download the latest [release](https://github.com/MarioMatschgi/static-tic-tac-toe/releases/) and upload to your webhost.
+
+
 ## Build it yourself
 
 1. Clone the repo
