@@ -3,6 +3,7 @@ import glob
 import shutil
 import time
 import sys
+import re
 
 
 template = open("./template.html", "r").read()
@@ -24,8 +25,39 @@ def get_content(char):
         return ""
 
 
+def check_winner(board: str, player: str = "x") -> bool:
+    """
+    Check if the given player (default 'x') has won the game.
+    :param board: A string of 9 characters representing the Tic Tac Toe board.
+    :param player: 'x' or 'o' to check for a win.
+    :return: True if the given player has won, False otherwise.
+    """
+    if len(board) != 9:
+        raise ValueError("Board must have exactly 9 characters.")
+    if player not in {'x', 'o'}:
+        raise ValueError("Player must be 'x' or 'o'.")
+    
+    # Replace every instance of 'x' with the given player symbol
+    player_regex = re.compile(
+        r"xxx[^x]{6}|[^x]{3}xxx[^x]{3}|[^x]{6}xxx|"
+        r"x[^x]{2}x[^x]{2}x[^x]{2}|[^x]x[^x]{2}x[^x]{2}x[^x]|"
+        r"[^x]{2}x[^x]{2}x[^x]{2}x|x[^x]{3}x[^x]{3}x|[^x]{2}x[^x]x[^x]x[^x]{2}"
+    )
+    
+    # Replace 'x' in the regex with the player's symbol
+    adjusted_regex = re.compile(player_regex.pattern.replace("x", player))
+    
+    return bool(adjusted_regex.search(board))
+
+
 def generate_html(pattern_str):
     file = template
+    has_winner_x = check_winner(pattern_str, player="x")
+    has_winner_o = check_winner(pattern_str, player="o")
+
+    winner_text = "x won!" if has_winner_x else "o won!" if has_winner_o else ""
+
+    file = file.replace(f"id=\"winner-txt\">", f"id=\"winner-txt\">{winner_text}")
 
     for row in range(3):
         for col in range(3):
@@ -34,7 +66,7 @@ def generate_html(pattern_str):
 
             link = ""
 
-            if char != "x" and char != "o":
+            if char != "x" and char != "o" and not has_winner_x and not has_winner_o:
                 new_pattern_str = get_invert(pattern_str[0]) + pattern_str[1:idx] + get_invert(pattern_str[0]) + pattern_str[idx + 1:]
 
                 link = f" href=\"/{new_pattern_str}.html\""
