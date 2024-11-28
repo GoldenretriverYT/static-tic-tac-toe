@@ -38,8 +38,8 @@ Lowercase `x` means player x
 Lowercase `o` means player o
 Underscore `_` or any other character means empty
 
-> 1 4 7
-> 2 5 8
+> 1 4 7  
+> 2 5 8  
 > 3 6 9
 
 ## Easy-Deployment script
