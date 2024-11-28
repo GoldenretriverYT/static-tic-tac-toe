@@ -45,6 +45,5 @@ git -C "static-tic-tac-toe" pull || git clone https://github.com/MarioMatschgi/s
 cd static-tic-tac-toe
 
 python3 generator.py
-rm index.html
-ln -s x-_________.html index.html
+ln -s x-_________.html ./output/index.html
 ```
