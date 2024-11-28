@@ -38,9 +38,18 @@ Lowercase `x` means player x
 Lowercase `o` means player o
 Underscore `_` or any other character means empty
 
-> 1 4 7  
-> 2 5 8  
-> 3 6 9
+
+> |Nr|0x|1x|2x|
+> |-|-|-|-|
+> |x0|1|4|7|
+> |x1|2|5|8|
+> |x2|3|6|9|
+
+> |ID|0x|1x|2x|
+> |--|--|--|--|
+> |x0|00|10|20|
+> |x1|01|11|21|
+> |x2|02|12|22|
 
 ## Easy-Deployment script
 
