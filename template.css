@@ -30,12 +30,12 @@ body > a {
     display: grid;
     justify-content: center;
 
-    grid-template-columns: repeat(3, 20vw);
+    grid-template-columns: repeat(3, 20vmin);
     border: 1px solid #efefef;
 }
 
 .grid div {
-    width: 20vw;
+    width: 20vmin;
     aspect-ratio: 1;
 }
 
