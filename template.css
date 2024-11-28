@@ -12,9 +12,17 @@ body {
     flex-direction: column;
 }
 
-body > a {
+body > a,
+body > span {
     color: #efefef;
     font-size: 1.5em;
+}
+
+body > span {
+    margin-bottom: 0.5em;
+}
+
+body > a {
     margin-top: 0.5em;
 }
 
