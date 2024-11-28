@@ -9,6 +9,9 @@
 TicTacToe is a solved game, meaning all possible states are calculated. This gave me the idea to make a generator, that generates all needed states of the TicTacToe board as static HTML files.  
 No JavaScript is required, just plain HTML. Each click on a tile is a link (<a>-Tag) to the corresponding state.
 
+> Disclaimer: Python is only required once for generating all the HTML files, your server won't need python or anything other than the ability to server HTML files.  
+> You can just copy all the html files and upload them to your Webhost
+
 
 ## Demo
 
