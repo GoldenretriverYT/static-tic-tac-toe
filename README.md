@@ -36,6 +36,7 @@ You can just download the latest [release](https://github.com/MarioMatschgi/stat
 ## Customize
 
 Customize the `template.html` and the `template.css` to your liking. Make sure to have `<a id="00">` - `<a id="22">` elements, since here the player pieces and the link will be inserted.  
+The winning text gets put as the content of any tag with `id="winner-txt">`. Customize the value of it in the `generator.py` by setting the `winner_x_text` and `winner_o_text` respectfully.  
 After customizing, don't forget to run the `generator.py` script.
 
 

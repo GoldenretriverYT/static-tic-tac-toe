@@ -6,6 +6,10 @@ import sys
 import re
 
 
+winner_x_text = "x won!"
+winner_o_text = "o won!"
+
+
 template = open("./template.html", "r").read()
 
 
@@ -53,7 +57,7 @@ def generate_html(pattern_str):
     has_winner_x = check_winner(pattern_str, player="x")
     has_winner_o = check_winner(pattern_str, player="o")
 
-    winner_text = "x won!" if has_winner_x else "o won!" if has_winner_o else ""
+    winner_text = winner_x_text if has_winner_x else winner_o_text if has_winner_o else ""
 
     file = file.replace(f"id=\"winner-txt\">", f"id=\"winner-txt\">{winner_text}")
 
