@@ -1,5 +1,9 @@
 # Static Tic-Tac-Toe
 
+> One wouldn't just, you know, make a Game, in like, ONLY HTML, no programming language at all - just plain HyperText Markup Languange - or would they?  
+> Who needs JavaScript anyways, am I right? Right?  
+> ...
+
 ## What is this?
 
 TicTacToe is a solved game, meaning all possible states are calculated. This gave me the idea to make a generator, that generates all needed states of the TicTacToe board as static HTML files.  
