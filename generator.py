@@ -32,8 +32,6 @@ def check_winner(board: str, player: str = "x") -> bool:
     :param player: 'x' or 'o' to check for a win.
     :return: True if the given player has won, False otherwise.
     """
-    if len(board) != 9:
-        raise ValueError("Board must have exactly 9 characters.")
     if player not in {'x', 'o'}:
         raise ValueError("Player must be 'x' or 'o'.")
     
