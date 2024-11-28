@@ -56,7 +56,8 @@ def print_progress_bar(current, total, bar_length=40):
 
 startTime = time.time()
 
-os.makedirs("./output")
+if not os.path.exists("./output"):
+    os.makedirs("./output")
 
 files = glob.glob('./output/*')
 
