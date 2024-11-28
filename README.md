@@ -20,6 +20,12 @@ Try it out at [tictactoe.programar.io](https://tictactoe.programar.io).
 > The starting URL is `/x-_________.html`
 
 
+## Customize
+
+Customize the `template.html` and the `template.css` to your liking. Make sure to have `<a id="00">` - `<a id="22">` elements, since here the player pieces and the link will be inserted.  
+After customizing, rerun the [Easy-Deployment](#Easy-Deployment-script) or the `generator.py` script.
+
+
 ## Combinations
 
 The `gen_patterns.py` script generates all needed combinations for player x and o. It gets saved to `combinations.txt` where each line is one board state. This file is used by the `generator.py` script.
