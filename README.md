@@ -36,7 +36,9 @@ Underscore `_` or any other character means empty
 > 2 5 8
 > 3 6 9
 
-## Deployment script
+## Easy-Deployment script
+
+Run this script with `sh` to automatically clone, pull and generate the HTML files. You'll only need to set your webserver's root to the `static-tic-tac-toe/output/` directory.
 
 ```sh
 #!/bin/bash
