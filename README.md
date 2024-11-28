@@ -23,7 +23,7 @@ Try it out at [tictactoe.programar.io](https://tictactoe.programar.io).
 ## Customize
 
 Customize the `template.html` and the `template.css` to your liking. Make sure to have `<a id="00">` - `<a id="22">` elements, since here the player pieces and the link will be inserted.  
-After customizing, rerun the [Easy-Deployment](#Easy-Deployment-script) or the `generator.py` script.
+After customizing, don't forget to run the `generator.py` script.
 
 
 ## Combinations
