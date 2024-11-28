@@ -41,15 +41,15 @@ def check_winner(board: str, player: str = "x") -> bool:
     
     # Replace every instance of 'x' with the given player symbol
     player_regex = re.compile(
-        r"xxx[^x]{6}|[^x]{3}xxx[^x]{3}|[^x]{6}xxx|"
-        r"x[^x]{2}x[^x]{2}x[^x]{2}|[^x]x[^x]{2}x[^x]{2}x[^x]|"
-        r"[^x]{2}x[^x]{2}x[^x]{2}x|x[^x]{3}x[^x]{3}x|[^x]{2}x[^x]x[^x]x[^x]{2}"
+        r"xxx......|...xxx...|......xxx|"  # Rows
+        r"x..x..x..|.x..x..x.|..x..x..x|"  # Columns
+        r"x...x...x|..x.x.x.."             # Diagonals
     )
     
     # Replace 'x' in the regex with the player's symbol
     adjusted_regex = re.compile(player_regex.pattern.replace("x", player))
     
-    return bool(adjusted_regex.search(board))
+    return bool(adjusted_regex.search(board[2:]))
 
 
 def generate_html(pattern_str):
