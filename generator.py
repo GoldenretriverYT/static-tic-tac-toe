@@ -1,10 +1,9 @@
-import os
 import glob
-import shutil
-import time
-import sys
+import os
 import re
-
+import shutil
+import sys
+import time
 
 winner_x_text = "x won!"
 winner_o_text = "o won!"
@@ -108,6 +107,7 @@ for f in files:
     print_progress_bar(current_file, total_files)
 
 shutil.copy("./template.css", "./output/template.css")
+shutil.copy("./template.js", "./output/template.js")
 
 removeTime = time.time()
 

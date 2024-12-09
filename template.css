@@ -24,6 +24,7 @@ body > span {
 
 body > a {
     margin-top: 0.5em;
+    user-select: none;
 }
 
 .grid {
